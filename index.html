@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>px vs em</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <section>
+      <header>
+        <h1>PX, EM, REM</h1>
+      </header>
+
+      <h3>Pixel</h3>
+      <p class="font-size-paragraph">
+        With pixel size, we set the exact pixel or point-size we want our font to be.
+        This is great for allowing us full control over what size our font renders.
+      </p>
+      <div class="size-px">
+        <p>This is pixel text.</p>
+        <div class="size-px">
+          <p>This is more pixel text.</p>
+        </div>
+      </div>
+      <hr>
+
+      <h3>EM</h3>
+      <p class="font-size-paragraph">
+        With EM, it is a multiplyer by the font-size of it's parent element.
+        if our html/body has a base font size (usually 16px) 1em on its first child would equal 16px.
+        2em would be 32, etc.   However, nested elements will continue to duplicate.   So here, our more EM text is inside a div with 2em already.   The first div will make it's font size (2em) equal to 32px, as it is double the parent font.   The second will now be 2em  or 2 times it's parent, in this case 2*32.  So the font size of our nested div is now 64px.
+      </p>
+      <div class="size-em">
+        <p>This is EM text.</p>
+        <div class="size-em">
+          <p>This is more EM text.</p>
+        </div>
+      </div>
+      <hr>
+
+      <h3>REM</h3>
+      <p class="font-size-paragraph">
+        REM will always duplicate based on the ROOT element.   In most cases this will be the html / body element.  And unless we change it ourselves, it should usually be based at 16px;
+      </p>
+      <div class="size-rem">
+        <p>This is REM text.</p>
+        <div class="size-rem">
+          <p>This is more REM text.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <header>
+        <h1>Default positions</h1>
+      </header>
+      <p>
+        By default some elements (div, p, header, etc.) display block by default.   Meaning they take up the whole width of their parent element.   We can tell these boxes where we want them to move with css properties.
+      </p>
+      <div class="generic">1</div>
+      <div class="generic">2</div>
+      <div class="generic">3</div>
+      <div class="generic">4</div>
+    </section>
+
+    <section>
+      <header>
+        <h1>
+          Hacky Work around for setting divs next to each other.
+        </h1>
+      </header>
+      <p>
+          Two ways around making divs sit next to each other
+          One, the browser is rendering the new line as a space between
+          The divs.  so by lining them up like so, we can eliminate that.
+
+          This is really not recommended as it makes the html file look crowded.
+      </p>
+      <div class="boxes">1</div><div class="boxes">2</div><div class="boxes">3</div><div class="boxes">4</div>
+    </section>
+
+
+    <section class="clearfix">
+      <header>
+        <h1>Floating</h1>
+      </header>
+      <p>
+        Option two is to use floats.   Floats will cause our divs to slide over in the direction we want
+        until they come in contact with another float or the wall of their parent element.
+
+        NOTE: this may require a clearfix, as floating elements will escape their parents containers.
+
+        .parent {
+           overflow: auto;
+        }
+        is a clearfix.
+      </p>
+        <div class="boxes floating-boxes">1</div>
+        <div class="boxes floating-boxes">2</div>
+        <div class="boxes floating-boxes">3</div>
+        <div class="boxes floating-boxes">4</div>
+    </section>
+
+      <section>
+        <header>
+          <h1>Floating right</h1>
+        </header>
+        <p>
+          Interesting things happen when you float to the right on several sequential elements
+        </p>
+        <div class="boxes floating-boxes-right">1</div>
+        <div class="boxes floating-boxes-right">2</div>
+        <div class="boxes floating-boxes-right">3</div>
+        <div class="boxes floating-boxes-right">4</div>
+        <p>
+          Notice our numbers are flipped.   This is because css and html read from top to bottom when applying the styles.   So our '1' box is going to float to the right first,   the '2' box will then float to the right until it runs into the first floating element,  in this case, the '1' box and so on.
+        </p>
+      </section>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+  </body>
+</html>

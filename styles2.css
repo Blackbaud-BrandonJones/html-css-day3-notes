@@ -1,0 +1,121 @@
+body {
+  background-color: red;
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+header {
+  overflow: auto;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 4em;
+  margin: 20px 0 30px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.xmas-partitions {
+  background-color: green;
+  color: white;
+}
+ul#top-nav {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: white;
+}
+
+ul#top-nav li {
+  margin: 10px;
+  display: inline-block;
+  width: 20%;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: darkred;
+  overflow: auto;
+  text-align: center;
+}
+
+.button-shape {
+  padding: 5px 15px;
+  color: black;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+}
+.button-shape:hover {
+  cursor: pointer;
+  background-color: #3e3e3e;
+  color: white;
+}
+
+section {
+  padding: 0 30px;
+}
+
+.container {
+  float: left;
+  width: 50%;
+}
+
+article {
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.image-wrapper {
+  width: 200px;
+  float: right;
+  margin: 5px;
+  border: 2px white solid;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+article.xmas-partitions p {
+  margin: 0;
+}
+
+
+.xmas-fire-img {
+  width: 100%;
+}
+
+aside {
+  float: right;
+  width: 40%;
+  background-color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.aside-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+}
+
+footer {
+  background-color: darkgreen;
+  color: chartreuse;
+  padding:25px 0;
+}
+
+#footer-div {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
